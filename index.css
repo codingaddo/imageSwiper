@@ -1,24 +1,39 @@
 .swiperContainer{
    position: relative;
    width: 100%;
-   height: 400px;
+   height:650px;
    overflow: hidden;
+   margin: auto;
 }
 
 .swiper{
-    display: flex;
-    transition: transform .3s ease-in-out;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .slide{
-    flex: 1 0 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
 }
 
+.active{
+    opacity: 1;
+}
+
+
 .slide img{
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+ 
 }
 
 .btn{
@@ -39,4 +54,13 @@
 }
 .right{
     right: 0;
+}
+
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right:100px solid black;
+    border-bottom: 20px solid transparent;
 }
